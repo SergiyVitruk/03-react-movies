@@ -1,5 +1,12 @@
 import axios from "axios";
-import type { Movie, SearchResponse } from "../types/movie";
+import type { Movie } from "../types/movie";
+
+export interface SearchResponse {
+  page: number;
+  results: Movie[];
+  total_pages: number;
+  total_results: number;
+}
 
 const myToken = import.meta.env.VITE_TMDB_TOKEN;
 
